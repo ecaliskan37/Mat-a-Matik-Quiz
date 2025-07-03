@@ -110,7 +110,6 @@ export default function App() {
     if (answerStatus) {
       timeOut = setTimeout(() => {
         setRecentStatusChange(false)
-        getNewProblem()
       }, 2000)
     }
 
