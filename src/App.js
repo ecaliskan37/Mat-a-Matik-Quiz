@@ -109,12 +109,13 @@ export default function App() {
     let timeOut
     if (answerStatus) {
       timeOut = setTimeout(() => {
-        setRecentStatusChange(false)
+        setAnswerStatus('')
+        setCurrentResponse('')
       }, 2000)
     }
 
     return () => clearTimeout(timeOut)
-  }, [recentStatusChange])
+  }, [answerStatus])
 
   let inputClass = gameStarted ? '' : 'hidden '
 
